@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+footer {
+  background-color: var.$background-color-primary;
+  color: var.$text-color-primary;
+  text-align: center;
+  padding: math.div(var.$gutter-base, 2.5);
+  margin-top: var.$gutter-base * 3.5;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 20;
+  bottom: 0;
+}

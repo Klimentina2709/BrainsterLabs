@@ -1,0 +1,123 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+header {
+  nav {
+    @include mix.section (90%);
+    padding-top: math.div(var.$gutter-base, 1.5);
+    padding-bottom: math.div(var.$gutter-base, 1.5);
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: var.$gutter-base * 2;
+    }
+
+    .menu {
+      display: flex;
+      padding: 0;
+      margin-bottom: 0;
+      align-items: center;
+    }
+
+    li {
+      font-size: var.$font-size-small;
+      font-weight: bold;
+      margin-right: var.$gutter-base;
+      display:inline-block;
+
+      &:not(:last-child) {
+        &:after {
+          display: block;
+          content: '';
+          border-bottom: solid 3px #eb0101;
+          transform: scaleX(0);
+          transition: transform 500ms ease-in-out;
+        }
+
+        &:hover:after {
+          transform: scaleX(1);
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include mix.laptop {
+        margin-right: math.div(var.$gutter-base, 6);
+      }
+
+      @include mix.tablet-styles {
+        padding: var.$gutter-base;
+      }
+    }
+
+    .btn {
+      white-space: nowrap;
+    }
+
+    .bars {
+      display: none;
+      color: var.$background-color-primary;
+
+      &:hover {
+        color: var.$background-color-button;
+      }
+
+      @include mix.tablet-styles {
+        display: block;
+        font-size: var.$font-size-medium * 1.5;
+      }
+    }
+
+    .menu {
+      transition: 0.5s;
+      z-index: 1;
+
+      @include mix.tablet-styles {
+        flex-direction: column;
+        align-items: start;
+        position: fixed;
+        background-color: var.$background-color-primary;
+        width: var.$gutter-base * 10;
+        top: 0;
+        right: -(var.$gutter-base * 10);
+        height: 100vh;
+      }
+
+      @include mix.mobile-l-styles {
+        width: 100%;
+        right: -100%;
+      }
+
+      &:target {
+        right: 0;
+      }
+    }
+
+    .hide-menu-icon {
+      display: none;
+
+      &:hover {
+        color: var.$background-color-button;
+      }
+
+      @include mix.tablet-styles {
+        display: block;
+        position: absolute;
+        right: math.div(var.$gutter-base, 1.5);
+        top: math.div(var.$gutter-base, 1.5);
+        font-size: var.$font-size-medium;
+        color: var.$text-color-primary;
+      }
+    }
+
+    a {
+      @include mix.tablet-styles {
+        color: var.$text-color-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+.filters {
+  display: flex;
+  position: relative;
+
+  @include mix.tablet-styles {
+    flex-direction: column;
+  }
+
+  .flex-item {
+    flex-basis: 33.333%;
+    background-color: var.$background-color-primary;
+    border-right: 1px solid var.$background-color-neutral;
+
+    &:last-child {
+      border: 0;
+    }
+
+    @include mix.tablet-styles {
+      border: 0;
+    }
+
+    label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: math.div(var.$gutter-base, 1.5);
+      margin-bottom: 0;
+      color: var.$text-color-primary;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked + label {
+      background-color: var.$background-color-button;
+    }
+  }
+
+  input {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .fa-circle-check {
+    display: block;
+    padding-right: 20px;
+    font-size: var.$font-size-medium;
+    color: var.$background-color-primary;
+  }
+
+  input[type="checkbox"]:checked + label .fa-circle-check {
+    color: var.$background-color-neutral;
+  }
+  
+}

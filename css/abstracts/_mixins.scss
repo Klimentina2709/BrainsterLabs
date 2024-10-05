@@ -1,0 +1,43 @@
+@use "./variables" as var;
+@use "sass:math";
+
+// RESPONSIVE MIXINS
+@mixin tablet-styles {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile-l-styles {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+%section {
+  padding-top: var.$gutter-base * 1.5;
+  padding-bottom: var.$gutter-base * 1.5;
+
+  @include tablet-styles {
+    padding-top: math.div(var.$gutter-base, 2);
+    padding-bottom: math.div(var.$gutter-base, 2);
+  }
+}
+
+@mixin section($size) {
+  width: $size;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet-styles {
+    width: 100%;
+    padding-left: math.div(var.$gutter-base, 2);
+    padding-right: math.div(var.$gutter-base, 2);
+  }
+}

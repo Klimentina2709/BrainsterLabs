@@ -1,0 +1,62 @@
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+body {
+  font-family: var.$font-family-base;
+  font-weight: var.$font-weight-normal;
+  line-height: var.$line-height-base;
+  color: var.$text-color-base;
+  background-color: var.$background-color-base;
+  margin-bottom: 105px;
+}
+
+a {
+  text-decoration: none;
+  color: var.$text-color-base;
+}
+
+li {
+  list-style-type: none;
+}
+
+.btn2 {
+  color: var.$text-color-primary;
+  background-color: var.$background-color-button;
+  border: none;
+  text-transform: uppercase;
+  border-radius: math.div(var.$gutter-base, 5);
+  padding: math.div(var.$gutter-base, 1.5) var.$gutter-base;
+
+  &:hover {
+    background-color: var.$background-color-secondary;
+  }
+}
+
+.btn {
+  background: linear-gradient(253.58deg, #ff1300 1.55%, #d82b1f 66.84%);
+  position: relative;
+  padding: math.div(var.$gutter-base, 2) math.div(var.$gutter-base, 1.5);
+  z-index: 10;
+  color: var.$text-color-primary;
+  display: inline-block;
+  border-radius: math.div(var.$gutter-base, 4);
+}
+
+.btn:after {
+  background: linear-gradient(253.58deg, #d82b1f 1.55%, #ff1300 66.84%);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: -10;
+  transition: opacity 0.5s;
+  border-radius: math.div(var.$gutter-base, 4);
+}
+
+.btn:hover:after {
+  opacity: 1;
+}

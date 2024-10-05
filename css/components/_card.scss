@@ -1,0 +1,154 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+.main {
+  &.shadow-effect {
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  #show-more-btn {
+    display: none;
+  }
+
+  @include mix.tablet-styles {
+    .hidden {
+      display: none;
+    }
+
+    #show-more-btn {
+      display: block;
+      margin: 0 auto;
+      width: 30%;
+      margin-top: var.$gutter-base * 2;
+      cursor: pointer;
+    }
+  }
+
+  .title {
+    text-align: center;
+    @extend %section;
+    font-size: var.$heading-size-big;
+    color: var.$text-color-secondary;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 30vh;
+    border-radius: (math.div(var.$gutter-base, 6))
+      (math.div(var.$gutter-base, 6)) 0 0;
+  }
+
+  .card-position {
+    @include mix.section(70%);
+    margin: 0 auto;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -(math.div(var.$gutter-base, 1.5));
+  }
+
+  .flex-child {
+    flex-basis: 33.333%;
+
+    &:nth-child(3n + 1) {
+      order: 1;
+    }
+
+    &:nth-child(3n + 2) {
+      order: 2;
+    }
+
+    &:nth-child(3n + 3) {
+      order: 3;
+    }
+
+    @include mix.tablet-styles {
+      flex-basis: 50%;
+    }
+
+    @include mix.mobile-l-styles {
+      flex-basis: 100%;
+    }
+  }
+
+  .inner-item {
+    margin-top: math.div(var.$gutter-base, 1.5);
+    background-color: var.$background-color-neutral;
+    margin-right: math.div(var.$gutter-base, 1.5);
+    border-radius: math.div(var.$gutter-base, 6);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+
+    &:hover {
+      transform: scale(1.07);
+      transition: 0.5s;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5), 0 2px 8px 0 rgba(0, 0, 0, 1);
+    }
+
+    .circle {
+      position: absolute;
+      right: math.div(var.$gutter-base, 6);
+      top: math.div(var.$gutter-base, 6);
+      height: var.$gutter-base;
+      width: var.$gutter-base;
+      line-height: var.$gutter-base;
+      text-align: center;
+      border-radius: 50%;
+      background-color: var.$background-transparent;
+    }
+  }
+
+  .fa-heart {
+    &:hover {
+      transition: 0.4s;
+      color: var.$background-color-secondary;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    padding: math.div(var.$gutter-base, 1.5);
+
+    span {
+      background-color: var.$background-color-base;
+      font-size: var.$font-size-small;
+      padding: math.div(var.$gutter-base, 6);
+    }
+
+    h4 {
+      margin-top: math.div(var.$gutter-base, 4);
+      margin-bottom: math.div(var.$gutter-base, 4);
+      font-size: math.div(var.$heading-size-small, 1.5);
+    }
+
+    p {
+      font-size: var.$font-size-small * 1.2;
+      font-weight: light;
+    }
+
+    small {
+      font-size: math.div(var.$font-size-small, 1.2);
+      display: block;
+      font-weight: bold;
+    }
+
+    .align {
+      display: flex;
+      justify-content: right;
+      margin-top: math.div(var.$gutter-base, 4);
+    }
+
+    .btn {
+      margin-top: math.div(var.$gutter-base, 3);
+      font-size: var.$font-size-small;
+    }
+  }
+}

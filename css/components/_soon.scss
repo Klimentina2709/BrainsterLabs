@@ -1,0 +1,68 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+.container-soon {
+  @include mix.section(80%);
+  @extend %section;
+  margin-bottom: var.$gutter-base;
+  background-color: var.$background-color-neutral;
+  border-radius: math.div(var.$gutter-base, 2);
+
+  h2 {
+    font-size: var.$heading-size-big * 1.5;
+    margin-bottom: var.$gutter-base;
+    border-bottom: 2px solid var.$background-color-secondary;
+  }
+
+  .fa-heart {
+    color: var.$background-color-secondary;
+    margin-left: math.div(var.$gutter-base, 3);
+  }
+
+  p {
+    color: var.$text-color-secondary;
+    font-size: var.$font-size-medium;
+    margin-bottom: var.$gutter-base * 1.2;
+  }
+
+  .feature-soon {
+    margin: math.div(var.$gutter-base, 3);
+    padding: math.div(var.$gutter-base, 1.5);
+    background: var.$background-transparent;
+    border-radius: math.div(var.$gutter-base, 3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid var.$background-transparent;
+
+    @include mix.mobile-l-styles {
+      display: none;
+    }
+  }
+
+  .feature-soon:hover {
+    transform: scale(1.07);
+    transition: 0.5s;
+  }
+
+  @keyframes scale {
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  .btn2 {
+    margin-top: math.div(var.$gutter-base, 2);
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+    animation: scale 2s infinite;
+  }
+
+  .align-item {
+    text-align: center;
+  }
+}

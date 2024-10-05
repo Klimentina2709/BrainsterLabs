@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="mk">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./logo/Logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <header>
+      <!-- navbar -->
+      <nav class="navbar-form">
+        <a href="./index.html">
+          <img src="../assets/logo/LogoNavbar.png" alt="Logo_Brainster" />
+        </a>
+
+        <a href="#toggle" class="bars">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </a>
+
+        <ul class="menu" id="toggle">
+          <li>
+            <a href="#close-menu" class="hide-menu-icon">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./coming_soon.html">Академија за маркетинг</a>
+          </li>
+          <li>
+            <a href="./coming_soon.html">Академија за програмирање</a>
+          </li>
+          <li>
+            <a href="./coming_soon.html">Академија за data science</a>
+          </li>
+          <li>
+            <a href="./coming_soon.html">Академија за дизајн</a>
+          </li>
+          <li><a href="./form.html" class="btn">Вработи наш студент</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Form section -->
+    <section class="main shadow-effect">
+      <div class="title">
+        <h2>Вработи студенти</h2>
+      </div>
+    </section>
+
+    <div class="form-section">
+      <form id="form">
+        <div class="child">
+          <div class="inner-child-item">
+            <div class="form-control">
+              <label for="username">Име и презиме</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Вашето име и презиме"
+              />
+              <i class="fa-solid fa-circle-check"></i>
+              <i class="fa-solid fa-circle-xmark"></i>
+              <small>Error message</small>
+            </div>
+          </div>
+        </div>
+        <div class="child">
+          <div class="inner-child-item">
+            <div class="form-control">
+              <label for="company">Име на компанија</label>
+              <input
+                type="text"
+                id="company"
+                placeholder="Име на вашата компанија"
+              />
+              <i class="fa-solid fa-circle-check"></i>
+              <i class="fa-solid fa-circle-xmark"></i>
+              <small>Error message</small>
+            </div>
+          </div>
+        </div>
+        <div class="child">
+          <div class="inner-child-item">
+            <div class="form-control">
+              <label for="email">Контакт имејл</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Контакт имејл на вашата компанија"
+              />
+              <i class="fa-solid fa-circle-check"></i>
+              <i class="fa-solid fa-circle-xmark"></i>
+              <small>Error message</small>
+            </div>
+          </div>
+        </div>
+        <div class="child">
+          <div class="inner-child-item">
+            <div class="form-control">
+              <label for="number">Контакт телефон</label>
+              <input
+                type="number"
+                id="number"
+                placeholder="Контакт телефон на вашата компанија"
+              />
+              <i class="fa-solid fa-circle-check"></i>
+              <i class="fa-solid fa-circle-xmark"></i>
+              <small>Error message</small>
+            </div>
+          </div>
+        </div>
+        <div class="child">
+          <div class="inner-child-item">
+            <div class="form-control">
+              <label for="options">Тип на студенти</label>
+              <select id="options">
+                <option value="" selected disabled hidden>
+                  Изберете тип на студент
+                </option>
+                <option value="marketing">Студенти од маркетинг</option>
+                <option value="programming">Студенти од програмирање</option>
+                <option value="datascience">Студенти од Data Science</option>
+                <option value="design">Студенти од дизајн</option>
+              </select>
+              <i class="fa-solid fa-circle-check"></i>
+              <i class="fa-solid fa-circle-xmark"></i>
+              <small class="select-option">Error message</small>
+            </div>
+          </div>
+        </div>
+        <div class="child">
+          <div class="inner-child-item">
+            <input type="submit" class="btn2" value="испрати" />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <small> Изработено со &#10084;&#65039;</small>
+    </footer>
+
+    <!-- js validation form -->
+
+    <script src="../js/validationForm.js"></script>
+  </body>
+</html>

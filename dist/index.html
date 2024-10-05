@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="mk">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../assets/logo/Logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brainster Labs</title>
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- Header section -->
+    <header>
+      <!-- navbar -->
+
+      <nav>
+        <a href="./index.html">
+          <img src="../assets/logo/LogoNavbar.png" alt="Logo_Brainster" />
+        </a>
+
+        <a href="#toggle" class="bars">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </a>
+
+        <ul class="menu" id="toggle">
+          <li>
+            <a href="#close-menu" class="hide-menu-icon">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./coming_soon.html">Академија за маркетинг</a>
+          </li>
+          <li>
+            <a href="./coming_soon.html">Академија за програмирање</a>
+          </li>
+          <li>
+            <a href="./coming_soon.html">Академија за data science</a>
+          </li>
+          <li>
+            <a href="./coming_soon.html">Академија за дизајн</a>
+          </li>
+          <li>
+            <a href="./form.html" class="btn">Вработи наш студент</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- banner -->
+      <div class="banner">
+        <h1>Brainster Labs</h1>
+      </div>
+    </header>
+
+    <!-- filters -->
+    <section class="filters">
+      <!-- 1 -->
+      <div class="flex-item">
+        <input type="checkbox" id="marketing-filter" />
+        <label for="marketing-filter">
+          Проекти на студенти по академијата <br />за маркетинг
+          <i class="fa-solid fa-circle-check"></i>
+        </label>
+      </div>
+      <!-- 2 -->
+      <div class="flex-item">
+        <input type="checkbox" id="programming-filter" />
+        <label for="programming-filter">
+          Проекти на студенти по академијата <br />за програмирање
+          <i class="fa-solid fa-circle-check"></i>
+        </label>
+      </div>
+      <!-- 3 -->
+      <div class="flex-item">
+        <input type="checkbox" id="design-filter" />
+        <label for="design-filter">
+          Проекти на студенти по академијата <br />за дизајн
+          <i class="fa-solid fa-circle-check"></i>
+        </label>
+      </div>
+    </section>
+
+    <!-- main-->
+    <section class="main">
+      <div class="title">
+        <h2>Проекти</h2>
+      </div>
+      <!-- cards -->
+      <div class="card-position">
+        <div class="flex card-render">
+          <!-- content here -->
+        </div>
+      </div>
+
+      <button id="show-more-btn" class="btn2">Show More</button>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <small> Изработено со &#10084;&#65039;</small>
+    </footer>
+
+    <script src="../js/cards.js"></script>
+    <script src="../js/filtering.js"></script>
+    <script src="../js/pagination.js"></script>
+  </body>
+</html>
