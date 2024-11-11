@@ -2,7 +2,6 @@
 
 ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
 ![Sass](https://img.shields.io/badge/Sass-%23C69B7B.svg?&style=for-the-badge&logo=sass&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black)
 
 This project, built as part of my learning experience at Brainster Front-end Academy, focuses on providing users with an intuitive way to filter and navigate through available courses. It allowed me to create a multi-page application, applying Sass for styling, and explore front-end development concepts for the first time. One of the key highlights of the project was the implementation of the `filter()` method and form validation, which significantly improved both user interaction and data accuracy.
@@ -20,7 +19,7 @@ This project, built as part of my learning experience at Brainster Front-end Aca
 
 ## Technologies Used
 
-- ![Sass](https://img.shields.io/badge/Sass-%23C69B7B.svg?&style=for-the-badge&logo=sass&logoColor=white)  and  ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)for styling
+- ![Sass](https://img.shields.io/badge/Sass-%23C69B7B.svg?&style=for-the-badge&logo=sass&logoColor=white) for styling.
 - ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black) for front-end interactivity
 - ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white) for structure
 
